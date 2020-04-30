@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/assets/css/preloader.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="/assets/jquery.min.js"></script>
+    <script src="/assets/semantic.js"></script>
+
+    <style>
+        .container {
+            color: white;
+        }
+
+        /* ul#lyric>li::after {
+            content: "["attr(start-time) "]:";
+            font-family: 'Courier New', Courier, monospace;
+            font-size: x-small;
+        } */
+
+        div.player {
+            width: 100vw;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        div.player>span#timer {
+            position: fixed;
+            top: 1px;
+            left: 0;
+            width: 0;
+            height: 6px;
+            background: rgb(123, 170, 197);
+            transition: all .2s linear;
+            box-shadow: 5px 2px 10px 2px #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="player">
+        <span id="timer"></span>
+    </div>
+
+    <div id="preload">
+        <div class="loader"></div>
+        <div class="preloader"></div>
+    </div>
+
+    <div class="container">
+        <div id="lyric"></div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/events.js"></script>
+
+</body>
+
+</html>

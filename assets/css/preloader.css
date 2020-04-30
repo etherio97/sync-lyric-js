@@ -1,0 +1,100 @@
+@import url("./normalize.css");
+@import url("./semantic.css");
+
+@font-face {
+  font-family: "unicode";
+  src: local("Myanmar Text"),
+    url("/fonts/NotoSansMyanmar-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "unicode";
+  src: local("Myanmar Text"),
+    url("/fonts/NotoSansMyanmar-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "zawgyi";
+  src: local("Zawgyi-One"),
+    url("/fonts/NotoSansZawgyi-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "zawgyi";
+  src: local("Zawgyi-One"),
+    url("/fonts/NotoSansZawgyi-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader:before,
+.loader:after {
+  opacity: 0;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: 5px solid #0062ff;
+  box-shadow: 0 0 30px #0062ff, inset 0 0 30px #0062ff;
+}
+
+.loader:after {
+  z-index: 1;
+  animation: gogoloader 2s infinite 1s;
+}
+
+.loader:before {
+  z-index: 2;
+  animation: gogoloader 2s infinite;
+}
+
+@keyframes gogoloader {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.preloader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(13, 21, 51);
+  z-index: 99;
+}
+
+.hide {
+  transition: opacity 0.6s ease-out;
+  opacity: 0 !important;
+}
+
+.show {
+  transition: opacity 0.6s ease-out;
+  opacity: 1 !important;
+}

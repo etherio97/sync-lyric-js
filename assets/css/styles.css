@@ -1,0 +1,48 @@
+body {
+  background: rgb(31, 45, 95);
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#lyric {
+  text-align: center;
+  font-family: "unicode";
+  line-height: 26px;
+  font-size: 15px;
+}
+
+#lyric > span {
+  display: block;
+  padding-top: 10px;
+  opacity: 0.2;
+  transition: all 0.2s linear;
+}
+
+#lyric > span:last-child {
+  font-size: 25px;
+  padding-top: 40px;
+  padding-bottom: 45vh;
+  font-weight: bold;
+  opacity: 1;
+  animation: fade-in 0.4s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
