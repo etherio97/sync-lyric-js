@@ -1,6 +1,6 @@
 let synced, actived;
 
-const aux = new Audio('/audio/kyal_kalay-ywar-wa-na.mp3')
+const aux = new Audio('audio/kyal_kalay-ywar-wa-na.mp3')
 const lyrics = {
     data: [],
     el: document.getElementById('lyric'),
@@ -23,7 +23,7 @@ aux.addEventListener('play', () => synced = setInterval(auxPlayed, 800))
 aux.addEventListener('pause', () => auxPlayed() | clearInterval(synced))
 aux.addEventListener('ended', () => clearInterval(synced))
 
-fetch('/audio/kyal-ka-lay.txt')
+fetch('audio/kyal-ka-lay.txt')
     .then(res => res.text())
     .then(data => data.toString())
     .then(lyric => lyrics.data = lyric.split("\n"))
